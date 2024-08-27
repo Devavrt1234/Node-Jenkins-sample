@@ -23,7 +23,7 @@ pipeline {
         stage('Verify Application') {
             steps {
                 echo 'Verifying application...'
-                sh 'curl http://16.171.153.18:3000'  
+                sh 'curl http://44.203.39.125:3000'  
             }
         }
     }
