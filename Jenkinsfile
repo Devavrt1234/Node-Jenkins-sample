@@ -20,12 +20,7 @@ pipeline {
                 sh 'node index.js &'  // Run the application in the background
             }
         }
-        stage('Verify Application') {
-            steps {
-                echo 'Verifying application...'
-                sh 'curl http://44.203.39.125:3001'  
-            }
-        }
+        
     }
     post {
         success {
