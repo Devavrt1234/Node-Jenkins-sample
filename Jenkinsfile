@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 echo 'Cloning repository...'
-                git 'https://github.com/ashi-2212/Node-Jenkins.git'
+                git 'https://github.com/Devavrt1234/Node-Jenkins-sample.git'
             }
         }
         stage('Install Dependencies') {
@@ -20,12 +20,12 @@ pipeline {
                 sh 'node index.js &'  // Run the application in the background
             }
         }
-        // stage('Verify Application') {
-        //     steps {
-        //         echo 'Verifying application...'
-        //         sh 'curl http://44.203.39.125:3000'  
-        //     }
-        // }
+        stage('Verify Application') {
+            steps {
+                echo 'Verifying application...'
+                sh 'curl http://44.203.39.125:3001'  
+            }
+        }
     }
     post {
         success {
