@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying application...'
-                sh 'pm2 stop index && pm2 start index.js '  // Run the application in the background
+                sh 'pm2 start index.js'  // Run the application in the background
             }
         }
         
